@@ -1,11 +1,7 @@
 package main
 
-import "design-pattern/prototype"
+import "design-pattern/singleton"
 
 func main() {
-	mclaren := prototype.McLaren{
-		Name: "McLaren 22",
-	}
-	newMclaren := mclaren.Clone().(*prototype.McLaren)
-	print(newMclaren.Name)
+	go singleton.GetInstance()
 }
